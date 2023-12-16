@@ -4,7 +4,7 @@ data "aws_acm_certificate" "issued" {
   statuses = ["ISSUED"]
 }
 
-#creating Cloudfront distribution :
+#Create Cloudfront distribution
 resource "aws_cloudfront_distribution" "my_distribution" {
   enabled             = true
   aliases             =  [var.additional_domain]

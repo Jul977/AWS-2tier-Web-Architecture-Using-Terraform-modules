@@ -1,8 +1,10 @@
+#Create database subnet group
 resource "aws_db_subnet_group" "db-subnet" {
   name       = var.db_sub_group_name
-  subnet_ids = [var.private_db_subnet_az1_id, var.private_db_subnet_az2_id] # Replace with your private subnet IDs
+  subnet_ids = [var.private_db_subnet_az1_id, var.private_db_subnet_az2_id]
 }
 
+# Create database
 resource "aws_db_instance" "db" {
   identifier              = "bookdb-instance"
   engine                  = "mysql"
@@ -19,7 +21,7 @@ resource "aws_db_instance" "db" {
   skip_final_snapshot     = true
   backup_retention_period = 0
 
-  vpc_security_group_ids = [var.db_sg_id] # Replace with your desired security group ID
+  vpc_security_group_ids = [var.db_sg_id] 
 
   db_subnet_group_name = aws_db_subnet_group.db-subnet.name
 

@@ -1,3 +1,4 @@
+#Create launch template
 resource "aws_launch_template" "lt_name" {
   name          = "${var.project_name}-tpl"
   image_id      = var.ami
@@ -12,6 +13,7 @@ resource "aws_launch_template" "lt_name" {
   }
 }
 
+#Create autoscaling group
 resource "aws_autoscaling_group" "asg_name" {
 
   name                      = "${var.project_name}-asg"
@@ -39,7 +41,7 @@ resource "aws_autoscaling_group" "asg_name" {
   }
 }
 
-# scale up policy
+# Create a scale up policy
 resource "aws_autoscaling_policy" "scale_up" {
   name                   = "${var.project_name}-asg-scale-up"
   autoscaling_group_name = aws_autoscaling_group.asg_name.name
@@ -49,8 +51,8 @@ resource "aws_autoscaling_policy" "scale_up" {
   policy_type            = "SimpleScaling"
 }
 
-# scale up alarm
-# alarm will trigger the ASG policy (scale/down) based on the metric (CPUUtilization), comparison_operator, threshold
+# Create a scale up alarm
+# This alarm will trigger the ASG policy (scale/down) based on the metric (CPUUtilization), comparison_operator, threshold
 resource "aws_cloudwatch_metric_alarm" "scale_up_alarm" {
   alarm_name          = "${var.project_name}-asg-scale-up-alarm"
   alarm_description   = "asg-scale-up-cpu-alarm"
@@ -68,7 +70,7 @@ resource "aws_cloudwatch_metric_alarm" "scale_up_alarm" {
   alarm_actions   = [aws_autoscaling_policy.scale_up.arn]
 }
 
-# scale down policy
+# Create a scale down policy
 resource "aws_autoscaling_policy" "scale_down" {
   name                   = "${var.project_name}-asg-scale-down"
   autoscaling_group_name = aws_autoscaling_group.asg_name.name
@@ -78,7 +80,7 @@ resource "aws_autoscaling_policy" "scale_down" {
   policy_type            = "SimpleScaling"
 }
 
-# scale down alarm
+# Create a scale down alarm
 resource "aws_cloudwatch_metric_alarm" "scale_down_alarm" {
   alarm_name          = "${var.project_name}-asg-scale-down-alarm"
   alarm_description   = "asg-scale-down-cpu-alarm"

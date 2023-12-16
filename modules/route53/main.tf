@@ -1,8 +1,10 @@
+# Getting the hosted zone
 data "aws_route53_zone" "public-zone" {
   name         = var.hosted_zone_name
   private_zone = false
 }
 
+#Creating records in the hosted zone
 resource "aws_route53_record" "cloudfront_record" {
   zone_id = data.aws_route53_zone.public-zone.zone_id
   name    = "app.${data.aws_route53_zone.public-zone.name}"

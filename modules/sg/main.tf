@@ -32,7 +32,7 @@ resource "aws_security_group" "alb_sg" {
   }
 }
 
-# create security group for the Client
+# Create security group for the Client
 resource "aws_security_group" "client_sg" {
   name        = "client_sg"
   description = "enable http/https access on port 80 for elb sg"

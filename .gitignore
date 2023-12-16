@@ -11,8 +11,9 @@
 *.tfvars
 *.tfvars.json
 
-# Ignore CLI configuration files
+# Ignore the private keys for ec2
 ../modules/key/julkey
+../modules/key/julkey.pub
 
 
 ../main/.terraform/*
