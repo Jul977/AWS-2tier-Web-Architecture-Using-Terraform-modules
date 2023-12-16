@@ -12,8 +12,8 @@
 *.tfvars.json
 
 # Ignore CLI configuration files
-*.pem
-*.pub
+../modules/key/julkey
+
 
 ../main/.terraform/*
 *.hcl
