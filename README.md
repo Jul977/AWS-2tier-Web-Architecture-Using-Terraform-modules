@@ -3,12 +3,12 @@ A two-tier architecture is a software architecture in which a presentation layer
 
 ## Local setup
 
-We are going to use VsCode as an editor. Download it from here [VsCode](https://code.visualstudio.com/) 
+- We are going to use VsCode as an editor. Download it from here [VsCode](https://code.visualstudio.com/) 
 
-We are going to install Terraform extension in VsCode. Download it from here [Terraform](https://developer.hashicorp.com/terraform/downloads) Make sure to restart your system after installation.
+- We are going to install Terraform extension in VsCode. Download it from here [Terraform](https://developer.hashicorp.com/terraform/downloads) Make sure to restart your system after installation.
 
 
-You need to install aws-cli to use the aws functionally from your terminal. Download it from here [Cli](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+- You need to install aws-cli to use the aws functionally from your terminal. Download it from here [Cli](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 
 ### Create S3 Backend Bucket
 Create an S3 bucket to store the .tfstate file in the remote backend.
