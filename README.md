@@ -35,12 +35,12 @@ Go to AWS console -> AWS Certificate Manager (ACM) and make sure you have a vali
 ### Create Route 53 Hosted Zone
 Go to AWS Console -> Route53 -> Hosted Zones and ensure you have a public hosted zone available, if not create one with the name of your domain (My domain is hosted on NameCheap).
 
-![Alt text](4n.JPG)
+![Alt text](./picture/4n.JPG)
 
 ### Domain hosting on NameCheap
 Go to the public hosted zone we just created and copy the 4 Name Servers to be used as custom DNS servers for our domain hosted on NameCheap.
 
-![Alt text](n.JPG)
+![Alt text](./picture/n.JPG)
 
 ### Configure AWS-CLI
 Open the terminal on your system and type aws configure. it will ask for your Acess key ID and secret key id. Please enter what we have just created. Use the default region us-east-1 
@@ -70,38 +70,38 @@ let's see what Terraform created on our AWS console.
 ..\picture\vpc.JPG
 
 ### Security groups
-![Alt text](picture/sg.JPG)
+![Alt text](./picture/sg.JPG)
 
 ### NAT gateway
-![Alt text](nat.JPG)
+![Alt text](./picture/nat.JPG)
 
 ### Internet gateway
-![Alt text](igw.JPG)
+![Alt text](./picture/igw.JPG)
 
 ### Routing table
-![Alt text](rt.JPG)
+![Alt text](./picture/rt.JPG)
 
 ### Launch template
-![Alt text](lt.JPG)
+![Alt text](./picture/lt.JPG)
 
 ### Target group
-![Alt text](tg.JPG)
+![Alt text]./picture/(tg.JPG)
 
 ### Application Load balancer
-![Alt text](lb.JPG)
+![Alt text](./picture/lb.JPG)
 
 ### Auto Scaling group
-![Alt text](asg.JPG)
+![Alt text](./picture/asg.JPG)
 
 ### RDS Instance
-![Alt text](db.JPG)
+![Alt text](./picture/db.JPG)
 
 ### Cloud Front distribution
-![Alt text](cf.JPG)
+![Alt text](./picture/cf.JPG)
 
 ### Record in route 53
-![Alt text](record.JPG)
+![Alt text](./picture/record.JPG)
 
 
 ## Our application is successfully deployed
-![Alt text](output.JPG)
+![Alt text](./picture/output.JPG)
