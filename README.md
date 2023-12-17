@@ -38,7 +38,7 @@ Go to AWS Console -> Route53 -> Hosted Zones and ensure you have a public hosted
 ![Alt text](./picture/4n.JPG)
 
 ### Domain hosting on NameCheap
-Go to the public hosted zone we just created and copy the 4 Name Servers to be used as custom DNS servers for our domain hosted on NameCheap.
+Go to the public hosted zone we just created and copy the 4 name servers above to be used as custom DNS servers for our domain hosted on NameCheap.
 
 ![Alt text](./picture/n.JPG)
 
