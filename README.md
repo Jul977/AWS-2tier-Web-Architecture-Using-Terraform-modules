@@ -10,11 +10,6 @@ We are going to install Terraform extension in VsCode. Download it from here [Te
 
 You need to install aws-cli to use the aws functionally from your terminal. Download it from here [Cli](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 
-
-### Create IAM Secret Key
-Cretae an IAM user and attach a policy e.g AdministratorAccess.
-- Create an Access key and secret key for the IAM user
-
 ### Create S3 Backend Bucket
 Create an S3 bucket to store the .tfstate file in the remote backend.
 - It is highly recommended that you enable Bucket Versioning on the S3 bucket to allow for state recovery in the case of accidental deletions and human error.
@@ -41,6 +36,10 @@ Go to AWS Console -> Route53 -> Hosted Zones and ensure you have a public hosted
 Go to the public hosted zone we just created and copy the 4 name servers above to be used as custom DNS servers for our domain hosted on NameCheap.
 
 ![Alt text](./picture/n.JPG)
+
+### Create IAM Secret Key
+Cretae an IAM user and attach a policy e.g AdministratorAccess.
+- Create an Access key and secret key for the IAM user
 
 ### Configure AWS-CLI
 Open the terminal on your system and type aws configure. it will ask for your Acess key ID and secret key id. Please enter what we have just created. Use the default region us-east-1 
