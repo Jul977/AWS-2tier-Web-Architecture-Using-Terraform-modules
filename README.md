@@ -92,6 +92,9 @@ let's see what Terraform created on our AWS console.
 ### Auto Scaling group
 ![Alt text](./picture/asg.JPG)
 
+### EC2 servers
+![Alt text](./picture/ec2.JPG)
+
 ### RDS Instance
 ![Alt text](./picture/db.JPG)
 
