@@ -67,7 +67,7 @@ Type the below command to see the plan of the execution
 let's see what Terraform created on our AWS console.
 
 ### VPC
-![Alt text](vpc.JPG)
+..\picture\vpc.JPG
 
 ### Security groups
 ![Alt text](sg.JPG)
