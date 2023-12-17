@@ -70,7 +70,7 @@ let's see what Terraform created on our AWS console.
 ..\picture\vpc.JPG
 
 ### Security groups
-![Alt text](sg.JPG)
+![Alt text](picture/sg.JPG)
 
 ### NAT gateway
 ![Alt text](nat.JPG)
